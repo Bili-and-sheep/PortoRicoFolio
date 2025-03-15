@@ -32,11 +32,6 @@ const social = [
         link: 'https://www.linkedin.com/in/eliott-andré',
     },
     {
-        name: 'X',
-        icon: 'x',
-        link: '',
-    },
-    {
         name: 'Email',
         icon: 'email',
         link: 'mailto:eliott.andre@oteria',
