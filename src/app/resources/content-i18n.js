@@ -2,8 +2,8 @@ import { InlineCode } from "@/once-ui/components";
 
 const createI18nContent = (t) => {
     const person = {
-        firstName: 'André',
-        lastName:  'Eliott',
+        firstName: 'Eliott',
+        lastName:  'André',
         get name() {
             return `${this.firstName} ${this.lastName}`;
         },
@@ -33,11 +33,6 @@ const createI18nContent = (t) => {
             link: 'https://www.linkedin.com/in/eliott-andré',
         },
         {
-            name: 'X',
-            icon: 'x',
-            link: '',
-        },
-        {
             name: 'Email',
             icon: 'email',
             link: 'mailto:eliott.andre@oteria',
@@ -64,7 +59,7 @@ const createI18nContent = (t) => {
             display: true
         },
         calendar: {
-            display: true,
+            display: false,
             link: 'https://cal.com'
         },
         intro: {
