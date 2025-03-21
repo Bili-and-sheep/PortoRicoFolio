@@ -12,7 +12,7 @@
         "title": "{name}'s Portfolio",
         "description": "Portfolio website showcasing my work as a {role}",
         "headline": "Cybersecurity Student and builder",
-        "subline": "I'm Selene, a Cybersecurity Student at FLY, where I craft intuitive user experiences. After hours, I build my own projects."
+        "subline": "I'm Eliott, a Cybersecurity Student at FLY, where I craft intuitive user experiences. After hours, I build my own projects."
     },
     "about": {
         "label": "About",
@@ -20,7 +20,7 @@
         "description": "Meet {name}, {role} from {location}",
         "intro": {
             "title": "Introduction",
-            "description": "Selene is a Jakarta-based Cybersecurity Student with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology."
+            "description": "Eliott is a Jakarta-based Cybersecurity Student with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology."
         },
         "work": {
             "title": "Work Experience",
