@@ -17,11 +17,12 @@ import { renderContent } from "@/app/resources";
 import { Background, Flex } from "@/once-ui/components";
 
 export async function generateMetadata(
-	{ params: { locale }}: { params: { locale: string }}
+	{ params: { locale } }: { params: { locale: string } }
 ) {
-
 	const t = await getTranslations();
 	const { person, home } = renderContent(t);
+
+	const ogImage = `${baseURL}/og-image.jpg`; // Assure-toi que cette image existe
 
 	return {
 		metadataBase: new URL(`https://${baseURL}/${locale}`),
@@ -34,19 +35,26 @@ export async function generateMetadata(
 			siteName: `${person.firstName}'s Portfolio`,
 			locale: 'en_US',
 			type: 'website',
+			images: [
+				{
+					url: ogImage,
+					width: 1200,
+					height: 630,
+					alt: `${person.firstName}'s Portfolio`,
+				},
+			],
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: `${person.firstName}'s Portfolio`,
+			description: "Portfolio website showcasing my work.",
+			images: [ogImage],
 		},
 		robots: {
 			index: true,
 			follow: true,
-			googleBot: {
-				index: true,
-				follow: true,
-				'max-video-preview': -1,
-				'max-image-preview': 'large',
-				'max-snippet': -1,
-			},
 		},
-	}
+	};
 };
 
 const primary = Inter({
@@ -56,7 +64,7 @@ const primary = Inter({
 })
 
 type FontConfig = {
-    variable: string;
+	variable: string;
 };
 
 /*
@@ -76,17 +84,17 @@ const code = Source_Code_Pro({
 
 interface RootLayoutProps {
 	children: React.ReactNode;
-	params: {locale: string};
+	params: { locale: string };
 }
 
 export function generateStaticParams() {
-	return routing.locales.map((locale) => ({locale}));
-  }
+	return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
 	children,
-	params: {locale}
-} : RootLayoutProps) {
+	params: { locale }
+}: RootLayoutProps) {
 	unstable_setRequestLocale(locale);
 	const messages = await getMessages();
 	return (
@@ -105,7 +113,7 @@ export default async function RootLayout({
 					secondary ? secondary.variable : '',
 					tertiary ? tertiary.variable : '',
 					code.variable)}>
-				<Flex style={{minHeight: '100vh'}}
+				<Flex style={{ minHeight: '100vh' }}
 					as="body"
 					fillWidth margin="0" padding="0"
 					direction="column">
@@ -113,12 +121,12 @@ export default async function RootLayout({
 						mask={effects.mask as any}
 						gradient={effects.gradient as any}
 						dots={effects.dots as any}
-						lines={effects.lines as any}/>
+						lines={effects.lines as any} />
 					<Flex
 						fillWidth
 						minHeight="16">
 					</Flex>
-					<Header/>
+					<Header />
 					<Flex
 						zIndex={0}
 						fillWidth paddingY="l" paddingX="l"
@@ -131,7 +139,7 @@ export default async function RootLayout({
 							</RouteGuard>
 						</Flex>
 					</Flex>
-					<Footer/>
+					<Footer />
 				</Flex>
 			</Flex>
 		</NextIntlClientProvider>
