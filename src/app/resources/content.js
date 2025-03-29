@@ -2,13 +2,13 @@ import { InlineCode } from "@/once-ui/components";
 
 const person = {
     firstName: 'André',
-    lastName: 'Eliott',
+    lastName:  'Eliott',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role: 'Cybersecurity Student',
-    avatar: '/images/avatar.jpg',
-    location: 'Europe/Paris',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    role:      'Cybersecurity Student',
+    avatar:    '/images/avatar.jpg',
+    location:  'Europe/Paris',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['English', 'French']  // optional: Leave the array empty if you don't want to display languages
 }
 
@@ -42,8 +42,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>FrontEnd Develloper & Cybersecurity Student</>,
-    subline: <>I'm Eliott, a Develloper & Cybersecurity Student at <InlineCode>Oteria Cyberschool</InlineCode></>
+    headline: <>Cybersecurity student At Oteria Cyberschool</>,
+    subline: <>I'm Eliott, a Cybersecurity student at <InlineCode>Oteria Cyberschool</InlineCode>, where I learn multiple things <br/> to become a CISO</>
 }
 
 const about = {
@@ -64,7 +64,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Eliott is a Jakarta-based Cybersecurity Student with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
     },
     work: {
         display: true, // set to false to hide this section
@@ -73,7 +73,7 @@ const about = {
             {
                 company: 'FLY',
                 timeframe: '2022 - Present',
-                role: 'Senior Cybersecurity Student',
+                role: 'Senior Design Engineer',
                 achievements: [
                     <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
                     <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
@@ -95,7 +95,7 @@ const about = {
                     <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
                     <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
                 ],
-                images: []
+                images: [ ]
             }
         ]
     },
@@ -175,73 +175,73 @@ const gallery = {
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
-        {
-            src: '/images/gallery/img-01.jpg',
+        { 
+            src: '/images/gallery/img-01.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
-        {
-            src: '/images/gallery/img-02.jpg',
+        { 
+            src: '/images/gallery/img-02.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
-        {
-            src: '/images/gallery/img-03.jpg',
+        { 
+            src: '/images/gallery/img-03.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
-        {
-            src: '/images/gallery/img-04.jpg',
+        { 
+            src: '/images/gallery/img-04.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
-        {
-            src: '/images/gallery/img-05.jpg',
+        { 
+            src: '/images/gallery/img-05.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
-        {
-            src: '/images/gallery/img-06.jpg',
+        { 
+            src: '/images/gallery/img-06.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
-        {
-            src: '/images/gallery/img-07.jpg',
+        { 
+            src: '/images/gallery/img-07.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
-        {
-            src: '/images/gallery/img-08.jpg',
+        { 
+            src: '/images/gallery/img-08.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
-        {
-            src: '/images/gallery/img-09.jpg',
+        { 
+            src: '/images/gallery/img-09.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
-        {
-            src: '/images/gallery/img-10.jpg',
+        { 
+            src: '/images/gallery/img-10.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
-        {
-            src: '/images/gallery/img-11.jpg',
+        { 
+            src: '/images/gallery/img-11.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
-        {
-            src: '/images/gallery/img-12.jpg',
+        { 
+            src: '/images/gallery/img-12.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
-        {
-            src: '/images/gallery/img-13.jpg',
+        { 
+            src: '/images/gallery/img-13.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
-        {
-            src: '/images/gallery/img-14.jpg',
+        { 
+            src: '/images/gallery/img-14.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },

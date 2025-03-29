@@ -1,4 +1,4 @@
-const baseURL = 'portoricofolio.com'
+const baseURL = 'potoricofolio.com'
 
 // Enable localization
 const i18n = false;
