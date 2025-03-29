@@ -17,11 +17,12 @@ import { renderContent } from "@/app/resources";
 import { Background, Flex } from "@/once-ui/components";
 
 export async function generateMetadata(
-	{ params: { locale }}: { params: { locale: string }}
+	{ params: { locale } }: { params: { locale: string } }
 ) {
-
 	const t = await getTranslations();
 	const { person, home } = renderContent(t);
+
+	const ogImage = `${baseURL}/og-image.jpg`; // Assure-toi que cette image existe
 
 	return {
 		metadataBase: new URL(`https://${baseURL}/${locale}`),
@@ -34,19 +35,26 @@ export async function generateMetadata(
 			siteName: `${person.firstName}'s Portfolio`,
 			locale: 'en_US',
 			type: 'website',
+			images: [
+				{
+					url: ogImage,
+					width: 1200,
+					height: 630,
+					alt: `${person.firstName}'s Portfolio`,
+				},
+			],
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: `${person.firstName}'s Portfolio`,
+			description: "Portfolio website showcasing my work.",
+			images: [ogImage],
 		},
 		robots: {
 			index: true,
 			follow: true,
-			googleBot: {
-				index: true,
-				follow: true,
-				'max-video-preview': -1,
-				'max-image-preview': 'large',
-				'max-snippet': -1,
-			},
 		},
-	}
+	};
 };
 
 const primary = Inter({
