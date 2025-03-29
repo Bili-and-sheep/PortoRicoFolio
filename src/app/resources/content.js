@@ -34,7 +34,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:eliott.andre@oteria',
+        link: 'mailto:eliott.andre@oteria.fr',
     },
 ]
 
