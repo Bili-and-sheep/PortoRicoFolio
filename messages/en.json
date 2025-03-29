@@ -10,7 +10,7 @@
     "home": {
         "label": "Home",
         "title": "{name}'s Portfolio",
-        "description": "Portfolio website showcasing my work as a {role}",
+        "description": "Portfolio website showcasing my work as a {role}, en.json ",
         "headline": "Cybersecurity Student and builder",
         "subline": "I'm Eliott, a Cybersecurity Student at FLY, where I craft intuitive user experiences. After hours, I build my own projects."
     },
