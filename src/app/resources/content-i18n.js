@@ -35,7 +35,7 @@ const createI18nContent = (t) => {
         {
             name: 'Email',
             icon: 'email',
-            link: 'mailto:eliott.andre@oteria',
+            link: 'mailto:eliott.andre@oteria.fr',
         },
     ]
 
