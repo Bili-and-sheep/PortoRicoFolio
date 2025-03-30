@@ -31,7 +31,7 @@ const effects = {
     cursor: true,
     x: 0,
     y: 0,
-    radius: 45,
+    radius: 50,
   },
   gradient: {
     display: true,
@@ -40,7 +40,7 @@ const effects = {
     width: 100,
     height: 100,
     tilt: 0,
-    colorStart: "brand-background-medium",
+    colorStart: "brand-background-strong",
     colorEnd: "static-transparent",
     opacity: 0.20,
   },
