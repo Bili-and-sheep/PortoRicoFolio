@@ -8,6 +8,7 @@ const person = {
   },
   role: "Cybersécurité Student",
   avatar: "/images/avatar.jpg",
+  avatarprewiew: "/images/avatarprewiew.jpeg",
   location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "French"], // optional: Leave the array empty if you don't want to display languages
 };
