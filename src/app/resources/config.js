@@ -1,4 +1,4 @@
-const baseURL = "portoricofolio.com";
+const baseURL = "eliottandre.com";
 
 const routes = {
   "/": true,

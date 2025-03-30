@@ -13,6 +13,7 @@ import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
 export async function generateMetadata() {
+  console.log("baseURL:", baseURL);
   return {
     metadataBase: new URL(`https://${baseURL}`),
     title: home.title,
