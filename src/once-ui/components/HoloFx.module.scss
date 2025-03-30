@@ -1,0 +1,43 @@
+.overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.holoFx {
+    isolation: isolate;
+    z-index: 0;
+    --gradient-color: rgba(138, 43, 226, 0.8); // Violet
+    --dot-color: rgba(138, 43, 226, 0.4); // Violet
+
+    &:hover {
+        .burn {
+            transform: translateX(1px) translateY(1px);
+            opacity: var(--burn-opacity);
+            z-index: 1;
+            filter: brightness(0.3) contrast(1.8) drop-shadow(0 0 10px rgba(138, 43, 226, 0.6));
+        }
+
+        .light {
+            transform: translateX(-1px) translateY(-1px);
+            opacity: var(--light-opacity);
+            z-index: 2;
+            filter: brightness(1.5) contrast(1.2) drop-shadow(0 0 15px rgba(138, 43, 226, 0.8));
+        }
+
+        .texture {
+            opacity: var(--texture-opacity);
+            transform: translateX(calc(var(--gradient-pos-x) / 50)) scale(1.1);
+            background-size: 150% 150%;
+            background-position: center;
+            z-index: 3;
+            background-image: repeating-linear-gradient(
+                            -45deg,
+                            rgba(138, 43, 226, 0.4) 0,
+                            rgba(138, 43, 226, 0.6) 1px,
+                            transparent 3px,
+                            transparent 2px
+            );
+        }
+    }
+}
