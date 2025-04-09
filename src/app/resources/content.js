@@ -198,6 +198,13 @@ const work = {
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
+const document = {
+  label: "Document",
+  title: "My documents",
+  description: `My document by ${person.name}`,
+  // Create new project pages by adding a new .mdx file to app/blog/posts
+  // All projects will be listed on the /home and /work routes
+};
 
 const gallery = {
   label: "Gallery",
@@ -278,4 +285,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, document };
