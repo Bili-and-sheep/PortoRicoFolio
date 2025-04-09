@@ -87,11 +87,12 @@ const about = {
   work: {
     display: true, // set to false to hide this section
     title: "Work Experience",
+
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Kelkun",
+        timeframe: "Jan 2025 - Feb 2025",
+        role: "Developer Intern Netx.js",
         achievements: [
           <>
             Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
@@ -102,6 +103,10 @@ const about = {
             iterate 50% faster.
           </>,
         ],
+        // with no image
+        // images: [],
+
+        // with image
         images: [
           // optional: leave the array empty if you don't want to display images
           {
@@ -112,22 +117,7 @@ const about = {
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
+
     ],
   },
   studies: {
@@ -144,8 +134,9 @@ const about = {
       },
     ],
   },
+
   technical: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
@@ -206,14 +197,22 @@ const document = {
   description: `My documents by ${person.name}`,
   documents: [
     {
-      title: "Document 1",
-      description: "Description of Document 1",
-      file: "/files/EliottAndreCV.pdf", // PDF file
+      title : "Document 1",
+      src: "/files/doc-01.pdf",
+      alt: "CV",
+
     },
     {
-      title: "Document 2",
-      description: "Description of Document 2",
-      file: "/files/doc-02.pdf",
+      title : "Document 2",
+      src: "/files/doc-02.pdf",
+      alt: "IT trend analysis",
+
+    },
+    {
+      title : "Document 3",
+      src: "/files/doc-03.pdf",
+      alt: "Skills Overview",
+
     },
   ],
 };

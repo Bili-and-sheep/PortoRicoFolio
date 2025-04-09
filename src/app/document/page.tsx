@@ -1,23 +1,17 @@
 import {
-  Avatar,
   Button,
   Column,
   Flex,
-  Heading,
-  Icon,
-  IconButton,
   SmartImage,
-  Tag,
   Text,
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
-import TableOfContents from "@/components/about/TableOfContents";
-import styles from "@/components/about/about.module.scss";
-import { person, about, social, document } from "@/app/resources/content";
+
+import { about, document } from "@/app/resources/content";
 
 export async function generateMetadata() {
-  const title = about.title;
-  const description = about.description;
+  const title = document.title;
+  const description = document.description;
   const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
@@ -48,7 +42,6 @@ export default function Document() {
   return (
       <Column maxWidth="m" gap="l">
         <Text variant="display-strong-l">{document.title}</Text>
-        <Text variant="body-default-m">{document.description}</Text>
         <Column gap="m">
           {document.documents.map((doc, index) => (
               <Flex
@@ -75,6 +68,7 @@ export default function Document() {
                       variant="secondary"
                       size="s"
                   >
+
                     View Document
                   </Button>
                 </Column>
