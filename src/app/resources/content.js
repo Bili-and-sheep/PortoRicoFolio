@@ -77,9 +77,10 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Eliott is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Hello there! I'm Eliott, a Cybersecurity student at Oteria Cyberschool,
+        based in Paris/Montpellier FR,
+        with a deep passion for car history, and tinkering with all type of technology.
+        I am currently on a journey to become a CISO and am excited to share my experiences and insights with you.
       </>
     ),
   },
@@ -134,12 +135,12 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "BTS SIO, Lycée Gabriel Fauré",
+        description: <>Studied software engineering, web & mobile development, and database management.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "BAC Pro, Lycée Pierre Rouge",
+        description: <>Studied electronics, networking & embedded Systems</>,
       },
     ],
   },
@@ -198,12 +199,23 @@ const work = {
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
+
 const document = {
   label: "Document",
   title: "My documents",
-  description: `My document by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `My documents by ${person.name}`,
+  documents: [
+    {
+      title: "Document 1",
+      description: "Description of Document 1",
+      file: "/files/EliottAndreCV.pdf", // PDF file
+    },
+    {
+      title: "Document 2",
+      description: "Description of Document 2",
+      file: "/files/doc-02.pdf",
+    },
+  ],
 };
 
 const gallery = {

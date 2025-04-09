@@ -13,7 +13,7 @@ import {
 import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import { person, about, social } from "@/app/resources/content";
+import { person, about, social, document } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -44,30 +44,43 @@ export async function generateMetadata() {
   };
 }
 
-export default function About() {
-  const structure = [
-    {
-      title: about.intro.title,
-      display: about.intro.display,
-      items: [],
-    },
-    {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
-    },
-    {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
-    },
-    {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
-    },
-  ];
+export default function Document() {
   return (
-    null
+      <Column maxWidth="m" gap="l">
+        <Text variant="display-strong-l">{document.title}</Text>
+        <Text variant="body-default-m">{document.description}</Text>
+        <Column gap="m">
+          {document.documents.map((doc, index) => (
+              <Flex
+                  key={index}
+                  gap="m"
+                  border="neutral-medium"
+                  radius="m"
+                  padding="m"
+                  align="center"
+              >
+                <SmartImage
+                    src={doc.preview}
+                    alt={doc.title}
+                    width={120}
+                    height={80}
+                    radius="m"
+                />
+                <Column gap="s">
+                  <Text variant="heading-strong-m">{doc.title}</Text>
+                  <Text variant="body-default-s">{doc.description}</Text>
+                  <Button
+                      href={`${baseURL}${doc.file}`}
+                      target="_blank"
+                      variant="secondary"
+                      size="s"
+                  >
+                    View Document
+                  </Button>
+                </Column>
+              </Flex>
+          ))}
+        </Column>
+      </Column>
   );
 }

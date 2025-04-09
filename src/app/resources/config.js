@@ -1,5 +1,4 @@
 const baseURL = "eliottandre.com";
-
 const routes = {
   "/": true,
   "/about": true,
