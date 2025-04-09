@@ -19,7 +19,7 @@ export async function GET(request: Request) {
         width: "100%",
         height: "100%",
         padding: "8rem",
-        background: "#151515",
+          background: "linear-gradient(90deg, #151515, #5C068C)",
       }}
     >
       <div
