@@ -94,14 +94,14 @@ const about = {
         timeframe: "Jan 2025 - Feb 2025",
         role: "Developer Intern Netx.js",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          // <>
+          //   Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
+          //   engagement and 30% faster load times.
+          // </>,
+          // <>
+          //   Spearheaded the integration of AI tools into design workflows, enabling designers to
+          //   iterate 50% faster.
+          // </>,
         ],
         // with no image
         // images: [],
@@ -110,7 +110,7 @@ const about = {
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/images/projects/project-01/Mac-Pro-macOS-Catalina-Wallpaper.jpg",
             alt: "Once UI Project",
             width: 16,
             height: 9,
@@ -224,7 +224,7 @@ const document = {
     },
     {
       title: "Skills Overview",
-      src: "/files/doc-03.pdf",
+      src: "/files/veille-techno-ea.pdf",
       alt: "Skills Overview",
       images: [
         {
