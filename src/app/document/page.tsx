@@ -40,41 +40,47 @@ export async function generateMetadata() {
 
 export default function Document() {
   return (
-      <Column maxWidth="m" gap="l">
-        <Text variant="display-strong-l">{document.title}</Text>
-        <Column gap="m">
-          {document.documents.map((doc, index) => (
+    <Column maxWidth="m" gap="l">
+      <Text variant="display-strong-l">{document.title}</Text>
+      <Column gap="m">
+        {document.documents.map((doc, index) => (
+          <Column key={`${doc.title}-${index}`} fillWidth gap="4">
+            <Text id={doc.title} variant="heading-strong-l">
+              {doc.title}
+            </Text>
+            <Text variant="body-default-m" onBackground="neutral-weak">
+              {doc.alt}
+            </Text>
+            <Flex fillWidth paddingTop="m" gap="12" wrap>
               <Flex
-                  key={index}
-                  gap="m"
-                  border="neutral-medium"
-                  radius="m"
-                  padding="m"
-                  align="center"
+                border="neutral-medium"
+                radius="m"
+                style={{
+                  maxWidth: "300px", // Limit the container width
+                  maxHeight: "400px", // Limit the container height
+                  overflow: "hidden", // Prevent overflow
+                }}
               >
                 <SmartImage
-                    src={doc.preview}
-                    alt={doc.title}
-                    width={120}
-                    height={80}
-                    radius="m"
+                  enlarge
+                  radius="m"
+                  alt={doc.alt}
+                  src={doc.images.src}
                 />
-                <Column gap="s">
-                  <Text variant="heading-strong-m">{doc.title}</Text>
-                  <Text variant="body-default-s">{doc.description}</Text>
-                  <Button
-                      href={`${baseURL}${doc.file}`}
-                      target="_blank"
-                      variant="secondary"
-                      size="s"
-                  >
-
-                    View Document
-                  </Button>
-                </Column>
               </Flex>
-          ))}
-        </Column>
+            </Flex>
+            <Button
+              href={doc.src}
+              target="_blank"
+              download
+              variant="secondary"
+              size="s"
+            >
+              Download
+            </Button>
+          </Column>
+        ))}
       </Column>
+    </Column>
   );
 }

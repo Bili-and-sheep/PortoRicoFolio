@@ -197,22 +197,43 @@ const document = {
   description: `My documents by ${person.name}`,
   documents: [
     {
-      title : "Document 1",
-      src: "/files/doc-01.pdf",
+      title: "My CV",
+      src: "/files/eliottandrecv.pdf",
       alt: "CV",
-
+      images: [
+        {
+          src: "/files/image/eliottandrecv.jpeg",
+          alt: "Project image",
+          width: 9,
+          height: 16,
+        },
+      ],
     },
     {
-      title : "Document 2",
-      src: "/files/doc-02.pdf",
+      title: "My IT trend analysis powerpoint",
+      src: "/files/tabcomp.pdf",
       alt: "IT trend analysis",
-
+      images: [
+        {
+          src: "/files/image/tabcomp.jpeg",
+          alt: "Project image",
+          width: 16,
+          height: 9,
+        },
+      ],
     },
     {
-      title : "Document 3",
+      title: "Skills Overview",
       src: "/files/doc-03.pdf",
       alt: "Skills Overview",
-
+      images: [
+        {
+          src: "/images/projects/project-01/cover-04.jpg",
+          alt: "Project image",
+          width: 16,
+          height: 9,
+        },
+      ],
     },
   ],
 };
