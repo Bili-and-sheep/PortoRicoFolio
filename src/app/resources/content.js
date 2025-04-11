@@ -211,7 +211,7 @@ const document = {
     },
     {
       title: "My IT trend analysis powerpoint",
-      src: "/files/tabcomp.pdf",
+      src: "/files/veille-techno-ea.pdf",
       alt: "IT trend analysis",
       images: [
         {
@@ -224,7 +224,7 @@ const document = {
     },
     {
       title: "Skills Overview",
-      src: "/files/veille-techno-ea.pdf",
+      src: "/files/tabcomp.pdf",
       alt: "Skills Overview",
       images: [
         {
