@@ -61,12 +61,12 @@ export default function Document() {
                   overflow: "hidden", // Prevent overflow
                 }}
               >
-                <SmartImage
-                  enlarge
-                  radius="m"
-                  alt={doc.alt}
-                  src={doc.images.src}
-                />
+                {/*<SmartImage*/}
+                {/*  enlarge*/}
+                {/*  radius="m"*/}
+                {/*  alt={doc.alt}*/}
+                {/*  src={doc.images.src}*/}
+                {/*/>*/}
               </Flex>
             </Flex>
             <Button
