@@ -202,7 +202,7 @@ const document = {
       alt: "CV",
       images: [
         {
-          src: "/files/image/eliottandrecv.jpeg",
+          link: "/files/image/eliottandrecv.jpeg",
           alt: "Project image",
           width: 9,
           height: 16,
@@ -215,7 +215,7 @@ const document = {
       alt: "IT trend analysis",
       images: [
         {
-          src: "/files/image/tabcomp.jpeg",
+          link: "/files/image/tabcomp.jpeg",
           alt: "Project image",
           width: 16,
           height: 9,
