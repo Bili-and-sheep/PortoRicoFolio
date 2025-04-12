@@ -39,16 +39,13 @@ export async function generateMetadata() {
 }
 
 export default function Document() {
-    // @ts-ignore
     return (
         <Column maxWidth="m">
             <Heading as="h2" id={document.title} variant="display-strong-s" marginBottom="m">
                 {document.title}
             </Heading>
-            <Column fillWidth gap="l" marginBottom="40">
+            <Column fillWidth gap="xl" marginBottom="40" align="center">
                 {document.documents.map((doc, index) => (
-
-
                     <Flex
                         key={`${doc.title}-${index}`}
                         gap="xl"
@@ -57,10 +54,14 @@ export default function Document() {
                         wrap
                         style={{ width: "100%", maxWidth: "900px" }}
                     >
-
-                        <Column flex={1} gap="m" align="start">
+                        {/* Colonne gauche : titre, bouton, alt alignés à droite et largeur réduite */}
+                        <Column
+                            style={{ maxWidth: "200px", width: "100%" }}
+                            gap="m"
+                            align="end"
+                        >
                             <Text variant="heading-strong-l">{doc.title}</Text>
-                            <Flex>
+                            <Flex style={{ justifyContent: "flex-end" }}>
                                 <Button
                                     href={doc.src}
                                     target="_blank"
@@ -71,46 +72,27 @@ export default function Document() {
                                     Download
                                 </Button>
                             </Flex>
-                            <Text variant="body-default-s" onBackground="brand-weak">
-                                {doc.alt}
-                            </Text>
+
                         </Column>
 
+                        {/* Colonne droite : image adaptée au format portrait avec enlarge */}
                         {doc.images && doc.images.length > 0 && doc.images[0] && (
-
-
-                            <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
-                                {doc.images.map((image, index) => (
-                                    <Flex
-
-                                        key={index}
-                                        border="neutral-medium"
-                                        radius="m"
-
-                                        minWidth={image.width}
-
-                                        height={image.height}
-                                        // @ts-ignore
-
-                                        horizontal="center"
-                                        vertical="center"
-
-                                    >
-                                        <SmartImage
-                                            enlarge
-                                            radius="m"
-                                            //@ts-ignore
-                                            sizes={image.width.toString()}
-                                            //@ts-ignore
-                                            alt={image.alt}
-                                            //@ts-ignore
-                                            src={image.link || image.src}
-                                        />
-                                    </Flex>
-                                ))}
+                            <Flex
+                                flex={1}
+                                style={{
+                                    maxWidth: "350px",
+                                    width: "100%",
+                                    aspectRatio: "12 / 16",
+                                    overflow: "visible",
+                                }}
+                            >
+                                <SmartImage
+                                    enlarge
+                                    radius="m"
+                                    alt={doc.images[0].alt}
+                                    src={doc.images[0].link || doc.images[0].src}
+                                />
                             </Flex>
-
-
                         )}
                     </Flex>
                 ))}

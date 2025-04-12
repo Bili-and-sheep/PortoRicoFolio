@@ -191,6 +191,12 @@ const work = {
   // All projects will be listed on the /home and /work routes
 };
 
+const schoolwork = {
+  label: "School Projects",
+  title: "My School projects",
+  description: `School Projects by ${person.name}`,
+};
+
 const document = {
   label: "Document",
   title: "My documents",
@@ -203,7 +209,7 @@ const document = {
       images: [
         {
           link: "/files/image/eliottandrecv.jpeg",
-          alt: "Project image",
+          alt: "CV Eliott André",
           width: 9,
           height: 16,
         },
@@ -215,8 +221,8 @@ const document = {
       alt: "IT trend analysis",
       images: [
         {
-          link: "/files/image/tabcomp.jpeg",
-          alt: "Project image",
+          link: "/files/image/veilletechno.png",
+          alt: "Veille techno",
           width: 16,
           height: 9,
         },
@@ -228,8 +234,8 @@ const document = {
       alt: "Skills Overview",
       images: [
         {
-          src: "/images/projects/project-01/cover-04.jpg",
-          alt: "Project image",
+          src: "/files/image/tabcomp.jpeg",
+          alt: "Tableau de compétences",
           width: 16,
           height: 9,
         },
@@ -317,4 +323,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery, document };
+export { person, social, newsletter, home, about, blog, work, gallery, document, schoolwork };

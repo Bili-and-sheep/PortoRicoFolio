@@ -24,6 +24,7 @@ import {
   HiOutlineEye,
   HiOutlineEyeSlash,
   HiOutlineDocument ,
+  HiOutlineCubeTransparent,
 } from "react-icons/hi2";
 
 import {
@@ -69,4 +70,5 @@ export const iconLibrary: Record<string, IconType> = {
   clipboard: HiClipboard,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument ,
+  cube: HiOutlineCubeTransparent,
 };
