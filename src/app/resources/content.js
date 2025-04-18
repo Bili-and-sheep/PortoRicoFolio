@@ -92,33 +92,114 @@ const about = {
       {
         company: "Kelkun",
         timeframe: "Jan 2025 - Feb 2025",
-        role: "Developer Intern Netx.js",
+        role: "NextJS Developer - Intern",
         achievements: [
-          // <>
-          //   Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-          //   engagement and 30% faster load times.
-          // </>,
-          // <>
-          //   Spearheaded the integration of AI tools into design workflows, enabling designers to
-          //   iterate 50% faster.
-          // </>,
+          <>Developed a web app using NextJS, Expo, and React Native for the Kelkun platform.</>,
+          <>Created reusable and responsive UI components with Tailwind CSS.</>,
+          <>Contributed to mobile app development for customer features.</>,
         ],
-        // with no image
-        // images: [],
-
-        // with image
         images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/Mac-Pro-macOS-Catalina-Wallpaper.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/kelkun-app-ui.jpg",
+          //   alt: "Kelkun App Interface",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
+      {
+        company: "E.Leclerc Saint-Aunès",
+        timeframe: "Aug 2024",
+        role: "Customer Service Representative – Car Rental",
+        achievements: [
+          <>Managed customer service and car rental operations for both utility and passenger vehicles.</>,
+          <>Cleaned and prepared vehicles before delivery.</>,
+          <>Provided assistance with detailing and administrative tasks.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "E.Leclerc Saint-Aunès",
+        timeframe: "Jul 2024",
+        role: "Shelf Stocker",
+        achievements: [
+          <>Restocked and organized shelves in the Bazar department.</>,
+          <>Maintained product placement according to store planograms.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Sequentiel",
+        timeframe: "Jun 2024 - Jul 2024",
+        role: "Front-End Developer - Intern",
+        achievements: [
+          <>Deployed and configured a Linux development environment.</>,
+          <>Implemented a PrestaShop theme using SCSS/SAAS based on client requirements.</>,
+          <>Collaborated using Symfony and Linux for the development stack.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Abis Informatique",
+        timeframe: "Mar 2023 - Apr 2023",
+        role: "IT - Intern",
+        achievements: [
+          <>Managed Windows server infrastructure with Hyper-V.</>,
+          <>Set up LAN infrastructure using Ubiquiti devices.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "AXI log",
+        timeframe: "Dec 2022",
+        role: "Web Developer / Designer - Intern",
+        achievements: [
+          <>Developed a custom MVC module for internal business logic.</>,
+          <>Designed UI mockups using Figma.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Mercateam",
+        timeframe: "May 2022 - Jun 2022",
+        role: "Cypress / TypeScript Developer  - Intern",
+        achievements: [
+          <>Created end-to-end automated tests using Cypress.</>,
+          <>Wrote test scripts using TypeScript and Visual Studio Code.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Pro Sima Informatique",
+        timeframe: "Mar 2022",
+        role: "Junior Web Developer  - Intern",
+        achievements: [
+          <>Developed a website using HTML, CSS, PHP, and MySQL.</>,
+          <>Deployed the site on a Ubuntu server with phpMyAdmin setup.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "ALX Technologies",
+        timeframe: "Jun 2021",
+        role: ".NET/XAML Developer - Intern",
+        achievements: [
+          <>Developed a client interface for a desktop application using .NET and XAML.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "IACA Electronique",
+        timeframe: "Dec 2020",
+        role: "Supply Chain & After-Sales - Intern",
+        achievements: [
+          <>Programmed PCB cards for logistics automation.</>,
+          <>Assisted in electronics rework, including soldering and refurbishment.</>,
+        ],
+        images: [],
+      },
+    ]
 
-    ],
   },
   studies: {
     display: true, // set to false to hide this section
