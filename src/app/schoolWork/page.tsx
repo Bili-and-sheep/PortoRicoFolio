@@ -1,16 +1,12 @@
-import {
-    Button,
-    Column,
-    Flex,
-    Heading,
-    SmartImage,
-    Text,
-} from "@/once-ui/components";
+import { getPosts } from "@/app/utils/utils";
+import { Column } from "@/once-ui/components";
+import { Projects } from "@/components/work/Projects";
 import { baseURL } from "@/app/resources";
-import { schoolwork } from "@/app/resources/content";
+import { person, schoolwork } from "@/app/resources/content";
+
 
 export async function generateMetadata() {
-    const title = schoolwork.title;
+    const title = schoolwork.label;
     const description = schoolwork.description;
     const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
@@ -21,7 +17,7 @@ export async function generateMetadata() {
             title,
             description,
             type: "website",
-            url: `https://${baseURL}/schoolwork`,
+            url: `https://${baseURL}/schoolWork/`,
             images: [
                 {
                     url: ogImage,
@@ -39,5 +35,36 @@ export async function generateMetadata() {
 }
 
 export default function schoolWork() {
+    let allProjects = getPosts(["src", "app", "work", "projects"]);
 
+    return (
+        <Column maxWidth="m">
+            <script
+                type="application/ld+json"
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "CollectionPage",
+                        headline: schoolwork.title,
+                        description: schoolwork.description,
+                        url: `https://${baseURL}/projects`,
+                        image: `${baseURL}/og?title=Design%20Projects`,
+                        author: {
+                            "@type": "Person",
+                            name: person.name,
+                        },
+                        hasPart: allProjects.map((project) => ({
+                            "@type": "CreativeWork",
+                            headline: project.metadata.title,
+                            description: project.metadata.summary,
+                            url: `https://${baseURL}/projects/${project.slug}`,
+                            image: `${baseURL}/${project.metadata.image}`,
+                        })),
+                    }),
+                }}
+            />
+            <Projects />
+        </Column>
+    );
 }
