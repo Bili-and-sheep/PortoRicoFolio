@@ -7,21 +7,21 @@ import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
 
-interface WorkParams {
+interface schoolWorkParams {
   params: {
     slug: string;
   };
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "work", "projects"]);
+  const posts = getPosts(["src", "app", "schoolWork", "projects"]);
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export function generateMetadata({ params: { slug } }: WorkParams) {
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slug);
+export function generateMetadata({ params: { slug } }: schoolWorkParams) {
+  let post = getPosts(["src", "app", "schoolWork", "projects"]).find((post) => post.slug === slug);
 
   if (!post) {
     return;
@@ -63,8 +63,8 @@ export function generateMetadata({ params: { slug } }: WorkParams) {
   };
 }
 
-export default function Project({ params }: WorkParams) {
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === params.slug);
+export default function Project({ params }: schoolWorkParams) {
+  let post = getPosts(["src", "app", "schoolWork", "projects"]).find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -91,7 +91,7 @@ export default function Project({ params }: WorkParams) {
                 image: post.metadata.image
                     ? `https://${baseURL}${post.metadata.image}`
                     : `https://${baseURL}/og?title=${post.metadata.title}`,
-                url: `https://${baseURL}/work/${post.slug}`,
+                url: `https://${baseURL}/schoolWork/${post.slug}`,
                 author: {
                   "@type": "Person",
                   name: person.name,
@@ -100,7 +100,7 @@ export default function Project({ params }: WorkParams) {
             }}
         />
         <Column maxWidth="xs" gap="16">
-          <Button href="/work" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
+          <Button href="/schoolWork" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
             Projects
           </Button>
           <Heading variant="display-strong-s">{post.metadata.title}</Heading>
